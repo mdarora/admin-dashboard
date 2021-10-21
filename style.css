@@ -6,3 +6,94 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+:root{
+    --blue: #287bff;
+    --white: #ffffff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+.navigation{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    transition: .5s;
+    overflow: hidden;
+    background-color: var(--blue);
+    border-left: 10px solid var(--blue);
+}
+.navigation ul {
+    width: 100%;
+    list-style: none;
+    position: absolute;
+    top: 0; left: 0;
+}
+.navigation ul li{
+    width: 100%;
+    position: relative;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover{
+    background-color: var(--white);
+}
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navigation ul li a{
+    width: 100%;
+    display: flex;
+    position: relative;
+    color: var(--white);
+    text-decoration: none;
+}
+.navigation ul li:hover a{
+    color: var(--blue);
+}
+.navigation ul li a .icon{
+    height: 60px;
+    min-width: 60px;
+    line-height: 70px;
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 1.75em;
+}
+.navigation ul li a .title{
+    height: 60px;
+    display: block;
+    line-height: 60px;
+    text-align: start;
+}
+
+.navigation ul li:hover a::before{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0; top: -50px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: transparent;
+    box-shadow: 35px 35px 0 10px var(--white);
+}
+.navigation ul li:hover a::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0; bottom: -50px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: transparent;
+    box-shadow: 35px -35px 0 10px var(--white);
+}
