@@ -218,3 +218,93 @@ main.active{
 .cardBox .card:hover .iconbox{
     color: var(--white );
 }
+
+/* ************************************************************************ */
+
+.details{
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    position: relative;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 2fr 1fr;
+}
+.details .recentOrders{
+    padding: 20px;
+    min-height: 500px;
+    border-radius: 20px;
+    display: grid;
+    background-color: var(--white);
+    box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.08);
+}
+.details .recentOrders .cardHeader{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.details .recentOrders .cardHeader h2{
+    font-weight: 600;
+    color: var(--blue);
+}
+.details .recentOrders .cardHeader .btn{
+    padding: 5px 10px;
+    color: var(--white);
+    border-radius: 6px;
+    position: relative;
+    text-decoration: none;
+    background-color: var(--blue);
+}
+.details table{
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+.details table th{
+    text-align: start;
+}
+.details table tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details table tr:last-child{
+    border: none;
+}
+.details table tbody tr:hover{
+    color: var(--white);
+    background-color: var(--blue);
+}
+.details table tbody tr td,
+.details table thead tr th{
+    padding: 10px;
+}
+.details table tr td:nth-child(2),
+.details table tr th:nth-child(2),
+.details table tr td:last-child,
+.details table tr th:last-child{
+    text-align: end;
+}
+
+.details table tr td:nth-child(3),
+.details table tr th:nth-child(3){
+    text-align: center;
+}
+.status{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 4px;
+    color: var(--white);
+    border-radius: 4px;
+}
+.status.delivered{
+    background-color: yellowgreen;
+}
+.status.return{
+    background-color: tomato;
+}
+.status.pending{
+    background-color: khaki;
+}
+.status.inprogress{
+    background-color: dodgerblue;
+}
