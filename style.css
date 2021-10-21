@@ -30,6 +30,9 @@ body{
     background-color: var(--blue);
     border-left: 10px solid var(--blue);
 }
+.navigation.active{
+    width: 80px;
+}
 .navigation ul {
     width: 100%;
     list-style: none;
@@ -73,8 +76,10 @@ body{
 .navigation ul li a .title{
     height: 60px;
     display: block;
+    padding: 0 10px;
     line-height: 60px;
     text-align: start;
+    white-space: nowrap;
 }
 
 .navigation ul li:hover a::before,
@@ -111,6 +116,10 @@ main{
     transition: .5s;
     width: calc(100% - 300px);
     background-color: var(--white);
+}
+main.active{
+    left: 80px;
+    width: calc(100% - 80px);
 }
 .topbar{
     width: 100%;

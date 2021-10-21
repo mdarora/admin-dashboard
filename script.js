@@ -1,3 +1,13 @@
+const toggleBtn = document.querySelector('.toggle');
+const navigation = document.querySelector('.navigation');
+const main = document.querySelector('main');
+
+toggleBtn.addEventListener('click', () => {
+    navigation.classList.toggle('active');
+    main.classList.toggle('active');
+});
+
+
 const navList = document.querySelectorAll('.navigation li');
 
 function activateLink() {
