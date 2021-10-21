@@ -101,3 +101,67 @@ body{
     background-color: transparent;
     box-shadow: 35px -35px 0 10px var(--white);
 }
+
+/* ************************************************************************ */
+
+main{
+    position: absolute;
+    left: 300px;
+    min-height: 100vh;
+    transition: .5s;
+    width: calc(100% - 300px);
+    background-color: var(--white);
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle{
+    /* width: 60px;
+    height: 60px; */
+    font-size: 2.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    width: 400px;
+    margin: 0 10px;
+    position: relative;
+}
+.search label{
+    width: 100%;
+    position: relative;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    font-size: 18px;
+    padding: 5px 10px 5px 35px;
+    border-radius: 40px;
+    border: 1px solid var(--black2);
+}
+.search label ion-icon{
+    position: absolute;
+    top: 0; left: 10px;
+    font-size: 1.2em;
+}
+.user{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.user img{
+    width: 100%;
+    object-fit: cover;
+}
