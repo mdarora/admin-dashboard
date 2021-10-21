@@ -174,3 +174,47 @@ main.active{
     width: 100%;
     object-fit: cover;
 }
+
+/* ************************************************************************ */
+
+.cardBox{
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.cardBox .card{
+    padding: 30px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.08);
+}
+.cardBox .card .numbers{
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--blue);
+    position: relative;
+}
+.cardBox .card .cardName{
+    font-size: 1.1em;
+    margin-top: 5px;
+    color: var(--black2);
+}
+.cardBox .card .iconbox{
+    font-size: 3em;
+    color: var(--black2);
+}
+.cardBox .card:hover{
+    background-color: var(--blue);
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconbox{
+    color: var(--white );
+}
