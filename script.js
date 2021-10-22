@@ -1,11 +1,15 @@
 const toggleBtn = document.querySelector('.toggle');
+const closeBtn = document.querySelector('.close-icon');
 const navigation = document.querySelector('.navigation');
 const main = document.querySelector('main');
 
-toggleBtn.addEventListener('click', () => {
+
+const toggleNav = () => {
     navigation.classList.toggle('active');
     main.classList.toggle('active');
-});
+}
+toggleBtn.addEventListener('click', toggleNav);
+closeBtn.addEventListener('click', toggleNav);
 
 
 const navList = document.querySelectorAll('.navigation li');

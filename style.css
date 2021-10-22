@@ -22,7 +22,7 @@ body{
     position: relative;
 }
 .navigation{
-    width: 300px;
+    width: 80px;
     height: 100%;
     position: fixed;
     transition: .5s;
@@ -31,7 +31,7 @@ body{
     border-left: 10px solid var(--blue);
 }
 .navigation.active{
-    width: 80px;
+    width: 300px;
 }
 .navigation ul {
     width: 100%;
@@ -45,6 +45,7 @@ body{
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
+
 .navigation ul li:hover, 
 .navigation ul li.active{
     background-color: var(--white);
@@ -111,15 +112,15 @@ body{
 
 main{
     position: absolute;
-    left: 300px;
+    left: 80px;
     min-height: 100vh;
     transition: .5s;
-    width: calc(100% - 300px);
+    width: calc(100% - 80px);
     background-color: var(--white);
 }
 main.active{
-    left: 80px;
-    width: calc(100% - 80px);
+    left: 300px;
+    width: calc(100% - 300px);
 }
 .topbar{
     width: 100%;
@@ -166,6 +167,7 @@ main.active{
 .user{
     width: 40px;
     height: 40px;
+    min-width: 40px;
     overflow: hidden;
     border-radius: 50%;
     cursor: pointer;
@@ -209,6 +211,7 @@ main.active{
 }
 .cardBox .card .iconbox{
     font-size: 3em;
+    margin-left: 10px;
     color: var(--black2);
 }
 .cardBox .card:hover{
@@ -236,6 +239,7 @@ main.active{
     min-height: 500px;
     border-radius: 20px;
     display: grid;
+    overflow-x: auto;
     background-color: var(--white);
     box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.08);
 }
@@ -259,6 +263,7 @@ main.active{
 .details .recentOrders table{
     width: 100%;
     margin-top: 10px;
+    overflow-x: auto;
     border-collapse: collapse;
 }
 .details .recentOrders table th{
@@ -266,6 +271,7 @@ main.active{
 }
 .details .recentOrders table tr{
     color: var(--black1);
+    white-space: nowrap;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .details .recentOrders table tr:last-child{
@@ -354,4 +360,68 @@ main.active{
 }
 .recentCustomers table tr:hover td h4 span{
     color: var(--white);
+}
+
+/* ************************************************************************ */
+
+@media screen and (max-width: 1200px) {
+    .navigation{
+        z-index: 99;
+    }
+    main.active{
+        width: calc(100% - 80px);
+    }
+    .navigation.active .close-icon{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .cardBox{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 840px){
+    .details{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cardBox .card .iconbox{
+        font-size: 2.5em;
+    }
+    .cardBox .card .numbers{
+        font-size: 1.7em;
+    }
+    .cardBox .card .cardName{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 590px){
+    .navigation{
+        width: 0;
+    }
+    .navigation.active{
+        width: 80%;
+    }
+    .navigation.active .close-icon{
+        display: none;
+    }
+    main{
+        width: 100%;
+        left: 0px;
+    }
+    main.active{
+        left: 80%;
+    }
+    .cardBox{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .details .cardHeader .btn{
+        font-size: 14px;
+    }
+    .details .cardHeader h2{
+        font-size: 20px;
+    }
+
+    
 }
