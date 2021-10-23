@@ -9,7 +9,6 @@ const toggleNav = () => {
     main.classList.toggle('active');
 }
 toggleBtn.addEventListener('click', toggleNav);
-closeBtn.addEventListener('click', toggleNav);
 
 
 const navList = document.querySelectorAll('.navigation li');
